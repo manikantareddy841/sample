@@ -1,0 +1,46 @@
+{% extends 'instituteapp/base.html' %}
+<html>
+<head>
+<title>Feedback Page</title>
+</head>
+<body>
+{% block content %}
+<style>
+b{
+color: red;
+font-size: 20px;
+font-family:Algerian;
+}
+</style>
+<div class="container">
+<div class="row">
+<div class="offset-md-3 col-md-6">
+{% if feedbacks %}
+<h3>Your Feedbacks Are...</h3>
+{% for i in feedbacks %}
+<b>Name: {{ i.name }}</b><br>
+Rating: {{ i.rating }}<br>
+Date: {{ i.date }}<br>
+Feedback: {{ i.feedback }}<br><br>
+{% endfor %}
+{% else %}
+<h3>No Feedbacks...</h3>
+{% endif %}
+
+<h3>Please Enter Your Feedback...</h3>
+<form method="POST">
+{% csrf_token %}
+{{ fform }}
+<center>
+<input type="submit" value="Feedback" class="btn btn-success">
+<input type="reset" value="Clear" class="btn btn-danger">
+</center>
+</form>
+</div>
+</div>
+</div>
+
+
+{% endblock %}
+</body>
+</html>

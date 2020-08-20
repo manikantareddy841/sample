@@ -1,0 +1,55 @@
+{% extends 'instituteapp/base.html' %}
+<html>
+<head>
+<title>Services Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+{% block content %}
+{% if courses %}
+<center>
+<table class="table table-bordered table-hover text-center">
+<thead>
+<tr>
+<th>Course Name</th>
+<th>Course Duration</th>
+<th>Start Date</th>
+<th>Start Time</th>
+<th>Trainer Name</th>
+<th>Trainer Exp</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+{% for i in courses %}
+<tr>
+<td>{{ i.course_name }}</td>
+<td>{{ i.duration }}</td>
+<td>{{ i.start_data }}</td>
+<td>{{ i.start_time }}</td>
+<td>{{ i.trainer_name }}</td>
+<td>{{ i.trainer_exp }}</td>
+<td>
+<a href="{{ i.content.url }}" class="btn btn-success">Download</a>
+</td>
+</tr>
+{% endfor %}
+</tbody>
+
+</table>
+</center>
+
+
+{% else %}
+<h2>Courses Are Not Available</h2>
+{% endif %}
+{% endblock %}
+</body>
+</html>
+
+

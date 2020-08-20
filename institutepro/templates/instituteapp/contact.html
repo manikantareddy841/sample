@@ -1,0 +1,41 @@
+{% extends 'instituteapp/base.html' %}
+<html>
+<head>
+<title>Contact Page</title>
+</head>
+<body>
+{% block content %}
+<style>
+ul{
+list-style-type: none;
+}
+</style>
+<div class="container">
+<div class="row">
+<div class="col-md-6" style="border: 2px black solid">
+<form method="post">
+{% csrf_token %}
+{{ cform }}<br>
+<input type="submit" value="Submit" class="btn btn-success">
+<input type="reset" value="Clear" class="btn btn-danger">
+
+</form>
+</div>
+<div class="col-md-6">
+<h3><b>Contact Us</b></h3><br>
+{# <img src="{% static "contact.jpg" %}">#}
+<map><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30912.56168016276!2d78.20946293932407!3d14.423116117838418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb3ebb7c5835cd9%3A0x3a4854affffebccd!2sPulivendula%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1580983340099!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></map>
+
+<h5><b>CHINNA SOFT SOLUTIONS at PULIVENDULA BUSTAND</b></h5>
+<p>Plot No : 202, IInd Floor,</p>
+<p>PULIVENDULA,</p>
+<p>KADAPA DIST, PULIVENDULA-516390.</p>
+`<p>Mobile: 917981525549</p>
+
+</div>
+
+</div>
+</div>
+{% endblock %}
+</body>
+</html>
