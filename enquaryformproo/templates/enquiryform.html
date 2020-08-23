@@ -1,0 +1,41 @@
+
+<html lang="en">
+<head>
+
+    <title>Enquiry form</title>
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+    ul{
+        list-style-type: none;
+    }
+    body{
+        background-color: deepskyblue;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h2 class="text-center">please enter your detailes</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ eform }}
+                <center>
+                    <input type="submit" value="enquiry" class="btn btn-success">
+                    <input type="reset" value="clear" class="btn btn-danger">
+                </center>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
