@@ -6,6 +6,7 @@ from django.http.response import HttpResponse
 #this is view function for enquary form
 def enquiryform_view(request):
     if request.method=='POST':
+        #eform
         eform=enquaryform(request.POST)
         if eform.is_valid():
             name=eform.cleaned_data.get('name')
