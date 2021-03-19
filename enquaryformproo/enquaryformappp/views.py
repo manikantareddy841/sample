@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import enquarydata
 from .forms import enquaryform
 from django.http.response import HttpResponse
+
+#this is view function for enquary form
 def enquiryform_view(request):
     if request.method=='POST':
         eform=enquaryform(request.POST)
