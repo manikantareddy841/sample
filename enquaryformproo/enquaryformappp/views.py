@@ -39,3 +39,4 @@ def enquiryform_view(request):
         return render(request,'enquiryform.html',{'eform':eform})
 
 # Create your views here.
+#def   nbxxjhd
