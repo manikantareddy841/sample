@@ -2,8 +2,11 @@ from django.shortcuts import render
 from .models import enquarydata
 from .forms import enquaryform
 from django.http.response import HttpResponse
+
+#this is view function for enquary form
 def enquiryform_view(request):
     if request.method=='POST':
+        #eform
         eform=enquaryform(request.POST)
         if eform.is_valid():
             name=eform.cleaned_data.get('name')
@@ -36,3 +39,5 @@ def enquiryform_view(request):
         return render(request,'enquiryform.html',{'eform':eform})
 
 # Create your views here.
+#def  function()
+#def   nbxxjhd
