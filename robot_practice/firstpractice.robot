@@ -24,3 +24,4 @@ LoginTest
     FOR     ${i}    IN RANGE    1
         Log to Console      ${var1}[${i}]
     END
+    log to console    javeed
