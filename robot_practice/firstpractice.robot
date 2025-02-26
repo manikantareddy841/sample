@@ -11,7 +11,7 @@ ${list1}     Create List     10 20  30  40
 @{list2}    10  20  30  40
 ${var1}     name
 ${int}      name    ${10}
-
+${name_one}     javeed
 *** Test Cases ***
 LoginTest
     ${len_var1}     Get Length  ${var1}
